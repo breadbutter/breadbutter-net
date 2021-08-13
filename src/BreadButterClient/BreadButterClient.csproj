@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.2</TargetFrameworks>
+    <RootNamespace>BreadButter</RootNamespace>
+    <PackageId>BreadButter.Client</PackageId>
+    <Authors>BreadButter.io</Authors>
+    <Product>BreadButter API Client</Product>
+    <Description>Package to help developers utilize the BreadButter managed login service.</Description>
+    <PackageProjectUrl>https://app.breadbutter.io/api/</PackageProjectUrl>
+    <PackageTags>Bread Butter User Journey SSO Identity SAML OAUTH Microsoft Google Facebook Okta LinkedIn Basecamp Fitbit Slack Twitch Twitter Shopify FourSquare WordPress Yahoo Amazon Uber Spotify Discord Instagram Paypal</PackageTags>
+    <Copyright>2021</Copyright>
+    <AssemblyName>BreadButter.BreadButterClient</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ServiceStack" Version="5.4.0" />
+    <PackageReference Include="ServiceStack.HttpClient" Version="5.4.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities">
+      <Version>2.2.0</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities">
+      <Version>2.2.0</Version>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
